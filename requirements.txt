@@ -2,3 +2,4 @@ streamlit
 sqlalchemy
 faker
 pymysql
+streamlit_autorefresh

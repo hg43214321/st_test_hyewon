@@ -2,6 +2,7 @@ import streamlit as st
 from sqlalchemy import create_engine, Table, Column, Integer, String, MetaData
 import pandas as pd
 from faker import Faker
+from streamlit_autorefresh import st_autorefresh
 
 # SQLite 데이터베이스 연결
 engine = create_engine('sqlite:///users.db')
@@ -50,4 +51,6 @@ def load_data():
 
 # 데이터 로드 및 표시
 data = load_data()
-st.write(data)
+st.dataframe(data)
+
+st_autorefresh(interval=3000)
