@@ -9,7 +9,6 @@ import os
 if 'DB_PASSWORD' in os.environ:
     db_password = os.environ['DB_PASSWORD']
     st.write(db_password)
-
 else:
     st.error('환경변수를 입력해주세요.')
 
